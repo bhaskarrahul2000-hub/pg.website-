@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queens Girls PG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Queens Girls PG</h1>
+        <p>Vaishali Nagar, Jaipur</p>
+    </header>
+
+    <section class="hero">
+        <img src="pg-room.jpg" alt="PG Room">
+        <div class="hero-text">
+            <h2>Starting from ₹7500/month</h2>
+            <p>Comfortable, safe & fully furnished PG for girls.</p>
+        </div>
+    </section>
+
+    <section class="amenities">
+        <h2>Facilities</h2>
+        <ul>
+            <li>Daily Cleaning</li>
+            <li>Free WiFi</li>
+            <li>Single & Double Sharing Rooms</li>
+            <li>Fully Furnished Rooms</li>
+            <li>RO Drinking Water</li>
+            <li>Power Backup</li>
+            <li>Attached Bathrooms</li>
+            <li>Homely Food</li>
+        </ul>
+    </section>
+
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form onsubmit="sendToWhatsApp(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="phone" placeholder="Your Phone" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send on WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>📍 Vaishali Nagar, Jaipur | 📞 7300226344</p>
+        <p>&copy; 2025 Queens Girls PG</p>
+    </footer>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let phone = document.getElementById("phone").value;
+            let message = document.getElementById("message").value;
+            let whatsappURL = `https://wa.me/917300226344?text=Hello, my name is ${name}. Phone: ${phone}. ${message}`;
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+</body>
+</html>
